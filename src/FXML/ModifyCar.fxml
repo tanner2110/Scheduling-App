@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="775.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventorySide.ModifyCarController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="68.0" layoutY="74.0" text="Modify Car">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="idTB" editable="false" layoutX="125.0" layoutY="141.0" promptText="Auto generated" />
+      <TextField fx:id="nameTB" layoutX="125.0" layoutY="175.0" />
+      <TextField fx:id="inventoryTB" layoutX="125.0" layoutY="209.0" />
+      <TextField fx:id="priceTB" layoutX="125.0" layoutY="247.0" />
+      <TextField fx:id="maxTB" layoutX="125.0" layoutY="281.0" />
+      <TextField fx:id="minTB" layoutX="125.0" layoutY="316.0" />
+      <Button layoutX="661.0" layoutY="491.0" mnemonicParsing="false" onMouseClicked="#ModProdSaveBut" prefHeight="25.0" prefWidth="52.0" text="Save" AnchorPane.bottomAnchor="52.0" />
+      <Button layoutX="574.0" layoutY="491.0" mnemonicParsing="false" onMouseClicked="#ModProdCancelBut" prefHeight="25.0" prefWidth="52.0" text="Cancel" AnchorPane.bottomAnchor="52.0" />
+      <Label layoutX="38.0" layoutY="145.0" prefHeight="17.0" prefWidth="12.0" text="ID" />
+      <Label layoutX="36.0" layoutY="179.0" text="Name" />
+      <Label layoutX="36.0" layoutY="213.0" prefHeight="17.0" prefWidth="16.0" text="Inv" />
+      <Label layoutX="34.0" layoutY="251.0" text="Price/Cost" />
+      <Label layoutX="34.0" layoutY="285.0" prefHeight="17.0" prefWidth="32.0" text="Max" />
+      <Label layoutX="34.0" layoutY="320.0" text="Min" />
+      <TableView fx:id="partTable" layoutX="385.0" layoutY="141.0" prefHeight="129.0" prefWidth="359.0" AnchorPane.bottomAnchor="298.0" AnchorPane.topAnchor="141.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="75.0" text="Part ID" />
+          <TableColumn fx:id="nameCol" prefWidth="74.0" text="Part Name" />
+            <TableColumn fx:id="inventoryCol" prefWidth="92.0" text="Inventory Level" />
+            <TableColumn fx:id="priceCol" prefWidth="121.0" text="Price/Cost per Unit" />
+        </columns>
+      </TableView>
+      <Button layoutX="571.0" layoutY="453.0" mnemonicParsing="false" onMouseClicked="#ModProdRemoveAssocPartBut" prefHeight="25.0" prefWidth="157.0" text="Remove Associated Part" AnchorPane.bottomAnchor="90.0" />
+      <Button layoutX="630.0" layoutY="273.0" mnemonicParsing="false" onMouseClicked="#ModProdAddBut" text="Add" AnchorPane.bottomAnchor="270.0" />
+      <TextField fx:id="partSearchBox" layoutX="564.0" layoutY="104.0" onKeyTyped="#partSearch" promptText="Search by part ID or name" />
+      <TableView fx:id="asPartTable" layoutX="385.0" layoutY="316.0" prefHeight="129.0" prefWidth="359.0" AnchorPane.bottomAnchor="123.0">
+         <columns>
+            <TableColumn fx:id="asIdCol" prefWidth="75.0" text="Part ID" />
+            <TableColumn fx:id="asNameCol" prefWidth="74.0" text="Part Name" />
+            <TableColumn fx:id="asInventoryCol" prefWidth="92.0" text="Inventory Level" />
+            <TableColumn fx:id="asPriceCol" prefWidth="121.0" text="Price/Cost per Unit" />
+         </columns>
+      </TableView>
+      <Label fx:id="errorLabel" layoutX="320.0" layoutY="478.0" prefHeight="37.0" prefWidth="245.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventorySide.ModifyPartOutController">
+   <children>
+      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="68.0" layoutY="74.0" text="Modify Part">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton disable="true" layoutX="185.0" layoutY="74.0" mnemonicParsing="false" text="In-House" />
+      <RadioButton fx:id="outRadio" layoutX="318.0" layoutY="74.0" mnemonicParsing="false" text="Outsourced" />
+      <TextField fx:id="idTB" editable="false" layoutX="125.0" layoutY="141.0" promptText="Auto generated" />
+      <TextField fx:id="nameTB" layoutX="125.0" layoutY="175.0" />
+      <TextField fx:id="inventoryTB" layoutX="125.0" layoutY="209.0" />
+      <TextField fx:id="priceTB" layoutX="125.0" layoutY="247.0" />
+      <TextField fx:id="maxTB" layoutX="125.0" layoutY="281.0" />
+      <TextField fx:id="companyNameTB" layoutX="125.0" layoutY="315.0" />
+      <TextField fx:id="minTB" layoutX="331.0" layoutY="281.0" />
+      <Button layoutX="362.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#SaveModPartBut" text="Save" />
+      <Button layoutX="436.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#CancelModPartBut" text="Cancel" />
+      <Label layoutX="38.0" layoutY="145.0" prefHeight="17.0" prefWidth="12.0" text="ID" />
+      <Label layoutX="36.0" layoutY="179.0" text="Name" />
+      <Label layoutX="36.0" layoutY="213.0" prefHeight="17.0" prefWidth="54.0" text="Inventory" />
+      <Label layoutX="34.0" layoutY="251.0" text="Price/Cost" />
+      <Label layoutX="34.0" layoutY="285.0" prefHeight="17.0" prefWidth="32.0" text="Max" />
+      <Label layoutX="36.0" layoutY="319.0" text="Company Name" />
+      <Label layoutX="290.0" layoutY="285.0" text="Min" />
+      <Label fx:id="warningLabel" layoutX="324.0" layoutY="195.0" prefHeight="75.0" prefWidth="239.0" textFill="#9a1d1d" />
+   </children>
+</AnchorPane>

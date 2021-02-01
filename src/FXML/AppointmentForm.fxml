@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="925.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CustomerAppointmentSide.AppointmentController">
+   <children>
+      <ComboBox fx:id="contactComboBox" layoutX="128.0" layoutY="146.0" prefWidth="150.0" />
+      <TextField fx:id="appointmentIdTB" editable="false" layoutX="129.0" layoutY="200.0" />
+      <RadioButton fx:id="startTimeAmRadio" layoutX="666.0" layoutY="277.0" mnemonicParsing="false" text="AM" visible="false" />
+      <RadioButton fx:id="startTimePmRadio" layoutX="718.0" layoutY="277.0" mnemonicParsing="false" text="PM" visible="false" />
+      <TextField fx:id="appointmentTitleTB" layoutX="129.0" layoutY="248.0" />
+      <TextField fx:id="appointmentDescriptionTB" layoutX="129.0" layoutY="292.0" prefWidth="149.0" />
+      <DatePicker fx:id="startDatePicker" layoutX="503.0" layoutY="159.0" />
+      <TextField fx:id="appointmentCustomerIdTB" editable="false" layoutX="129.0" layoutY="453.0" />
+      <TextField fx:id="appointmentUserIdTB" editable="false" layoutX="129.0" layoutY="488.0" />
+      <ComboBox fx:id="startTimePicker" layoutX="507.0" layoutY="200.0" prefHeight="25.0" prefWidth="67.0" />
+      <ComboBox fx:id="endTimePicker" layoutX="510.0" layoutY="273.0" prefHeight="25.0" prefWidth="61.0" />
+      <RadioButton fx:id="endTimeAmRadio" layoutX="666.0" layoutY="385.0" mnemonicParsing="false" text="AM" visible="false" />
+      <RadioButton fx:id="endTimePmRadio" layoutX="712.0" layoutY="385.0" mnemonicParsing="false" text="PM" visible="false" />
+      <DatePicker fx:id="endDatePicker" layoutX="503.0" layoutY="240.0" />
+      <Label layoutX="29.0" layoutY="204.0" text="Appointment ID" />
+      <Label layoutX="60.0" layoutY="252.0" text="Title" />
+      <Label layoutX="41.0" layoutY="296.0" text="Description" />
+      <Label layoutX="50.0" layoutY="455.0" text="Customer ID" />
+      <Label layoutX="60.0" layoutY="492.0" text="User ID" />
+      <Label layoutX="60.0" layoutY="150.0" text="Garage" />
+      <Label layoutX="364.0" layoutY="57.0" text="Create a Service Appointment" />
+      <Label layoutX="436.0" layoutY="163.0" text="Start Date" />
+      <Label layoutX="438.0" layoutY="244.0" text="End Date" />
+      <Button fx:id="appointmentSaveButton" layoutX="42.0" layoutY="569.0" mnemonicParsing="false" onMouseClicked="#saveAppointment" text="Save Appointment" />
+      <Button fx:id="appointmentCancelButton" layoutX="192.0" layoutY="569.0" mnemonicParsing="false" onMouseClicked="#cancelButtonclicked" text="Cancel" />
+      <TextField fx:id="appointmentTypeTB" layoutX="130.0" layoutY="415.0" />
+      <Label layoutX="71.0" layoutY="419.0" text="Type" />
+      <ComboBox fx:id="startTimePicker2" layoutX="590.0" layoutY="200.0" prefHeight="25.0" prefWidth="61.0" />
+      <ComboBox fx:id="endTimePicker2" layoutX="581.0" layoutY="273.0" prefHeight="8.0" prefWidth="61.0" />
+      <Label layoutX="436.0" layoutY="204.0" text="Start Time" />
+      <Label layoutX="438.0" layoutY="277.0" text="End Time" />
+      <Label layoutX="527.0" layoutY="453.0" textFill="#c33d3d">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="appConflictLabel" layoutX="14.0" layoutY="604.0" prefHeight="115.0" prefWidth="481.0" textFill="#cd2a2a" wrapText="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="requiredAppointmentPartsComboBox" layoutX="506.0" layoutY="340.0" prefWidth="150.0" promptText="Select a Car First" />
+      <Label layoutX="412.0" layoutY="344.0" text="Required Parts" />
+      <TableView fx:id="requiredPartTable" layoutX="495.0" layoutY="381.0" prefHeight="308.0" prefWidth="199.0" AnchorPane.bottomAnchor="38.0" AnchorPane.topAnchor="381.0">
+        <columns>
+          <TableColumn fx:id="partNameCol" prefWidth="232.0" text="Part Name" />
+        </columns>
+      </TableView>
+      <Button fx:id="addRequiredPartButton" layoutX="675.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#addRequiredPartButton" text="Add part" />
+      <Label layoutX="36.0" layoutY="385.0" text="Customer Car" />
+      <ComboBox fx:id="customerCarComboBox" layoutX="129.0" layoutY="381.0" onAction="#loadCarParts" prefWidth="150.0" />
+   </children>
+</AnchorPane>

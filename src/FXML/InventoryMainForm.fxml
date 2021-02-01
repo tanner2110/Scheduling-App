@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventorySide.InventoryMainFormController">
+  <children>
+    <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="856.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Button layoutX="221.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#AddPartBut" text="Add" AnchorPane.bottomAnchor="121.0" />
+            <Button fx:id="modifyPartsButton" layoutX="275.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#ModPartButClick" text="Modify" AnchorPane.bottomAnchor="121.0" />
+            <Button layoutX="342.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#DeletePartBut" text="Delete" AnchorPane.bottomAnchor="121.0" />
+            <Button layoutX="659.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#AddProdBut" text="Add" AnchorPane.bottomAnchor="121.0" />
+            <Button layoutX="708.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#ModProdBut" text="Modify" AnchorPane.bottomAnchor="121.0" />
+            <Button layoutX="776.0" layoutY="296.0" mnemonicParsing="false" onMouseClicked="#DeleteProdBut" text="Delete" AnchorPane.bottomAnchor="121.0" />
+            <Label layoutX="20.0" layoutY="34.0" prefHeight="20.0" prefWidth="240.0" text="Cars and Parts Management">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TableView id="partsTable" fx:id="partsTable" layoutX="20.0" layoutY="115.0" prefHeight="160.0" prefWidth="373.0" AnchorPane.bottomAnchor="167.0" AnchorPane.rightAnchor="463.0" AnchorPane.topAnchor="115.0">
+              <columns>
+                <TableColumn id="partId" fx:id="partId" prefWidth="58.0" text="Part ID" />
+                <TableColumn id="partName" fx:id="partName" prefWidth="172.0" text="Part Name" />
+                  <TableColumn id="inventory" fx:id="inventory" prefWidth="69.0" text="Inventory Level" />
+                  <TableColumn id="price" fx:id="price" prefWidth="73.0" text="Price/Cost per unit" />
+              </columns>
+            </TableView>
+            <TableView id="productsTable" fx:id="productTable" layoutX="454.0" layoutY="115.0" prefHeight="160.0" prefWidth="387.0" AnchorPane.bottomAnchor="167.0" AnchorPane.topAnchor="115.0">
+              <columns>
+                <TableColumn id="productId" fx:id="productIdCol" prefWidth="69.0" text="Car ID" />
+                <TableColumn id="productName" fx:id="productNameCol" prefWidth="156.0" text="Car Name" />
+                  <TableColumn id="inventory" fx:id="inventoryCol" prefWidth="75.0" text="Inventory Level" />
+                  <TableColumn id="price" fx:id="priceCol" prefWidth="123.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <Label layoutX="20.0" layoutY="98.0" text="Parts" />
+            <Label layoutX="454.0" layoutY="98.0" text="Cars" />
+            <Button layoutX="735.0" layoutY="381.0" mnemonicParsing="false" onMouseClicked="#appointmentMainButClicked" prefHeight="25.0" prefWidth="97.0" text="Appointments" AnchorPane.bottomAnchor="36.0" />
+            <TextField fx:id="partSearchBox" layoutX="240.0" layoutY="86.0" onKeyTyped="#SearchPartTextBox" promptText="Search by part ID or name" />
+            <TextField fx:id="productSearchBox" layoutX="678.0" layoutY="86.0" onKeyTyped="#SearchProdTextBox" promptText="Search by car ID or name" />
+            <Label fx:id="deleteWarning" layoutX="467.0" layoutY="249.0" prefHeight="95.0" prefWidth="185.0" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="warningLabel" layoutX="452.0" layoutY="288.0" prefHeight="70.0" prefWidth="196.0" textFill="#d33535" wrapText="true" />
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

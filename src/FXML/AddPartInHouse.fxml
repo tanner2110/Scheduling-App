@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="InventorySide.AddPartInHouseController">
+   <children>
+      <MenuBar layoutX="-1.0" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="68.0" layoutY="74.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="outSourcedRadio" layoutX="292.0" layoutY="74.0" mnemonicParsing="false" onMouseClicked="#AddPartRadioOut" prefHeight="17.0" prefWidth="86.0" text="Outsourced" />
+      <TextField fx:id="idTB" editable="false" layoutX="125.0" layoutY="141.0" promptText="Auto generated" />
+      <RadioButton fx:id="inHouseRadio" layoutX="165.0" layoutY="74.0" mnemonicParsing="false" text="In-House" />
+      <TextField fx:id="AddPartInNameTB" layoutX="126.0" layoutY="175.0" />
+      <TextField fx:id="AddPartInInvoTB" layoutX="126.0" layoutY="209.0" />
+      <TextField fx:id="AddPartInPriceTB" layoutX="126.0" layoutY="247.0" />
+      <TextField fx:id="AddPartInMaxTB" layoutX="126.0" layoutY="281.0" />
+      <TextField fx:id="AddPartInMachineIdTB" layoutX="126.0" layoutY="315.0" />
+      <TextField fx:id="AddPartInMinTB" layoutX="327.0" layoutY="281.0" />
+      <Button layoutX="362.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#AddPartSaveBut" text="Save" />
+      <Button layoutX="436.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#AddPartCancelBut" text="Cancel" />
+      <Label layoutX="42.0" layoutY="145.0" prefHeight="17.0" prefWidth="12.0" text="ID" />
+      <Label layoutX="36.0" layoutY="179.0" text="Name" />
+      <Label layoutX="40.0" layoutY="213.0" prefHeight="17.0" prefWidth="54.0" text="Inventory" />
+      <Label layoutX="36.0" layoutY="251.0" text="Price/Cost" />
+      <Label layoutX="40.0" layoutY="285.0" text="Max" />
+      <Label layoutX="33.0" layoutY="319.0" text="Batch Number" />
+      <Label layoutX="290.0" layoutY="285.0" text="Min" />
+      <Label fx:id="errorLabel" layoutX="311.0" layoutY="152.0" prefHeight="115.0" prefWidth="214.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
